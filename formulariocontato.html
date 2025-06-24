@@ -1,3 +1,15 @@
 <form action="..." method="get">
-    jjh
+    <label for="something">Nome: </label> <!--precisa adicionar um ID no input referencial pelo label e o input estar no mesmo escopo-->
+    <input id="name" type="text" name="name" value="Jão Maria" required>
+    <input type="password" name="senhaX" placeholder="Digite sua senha numérica" minlength="12" maxlength="50" required>
+
+    <label>Email: <!--nao precisa adicionar um ID no input pois esse ultimo esta dentor do escopo do label-->
+        <input type="email" name="email" placeholder="exemplo@email.com" required>
+    </label>
+<label for="etnia" aria-required="true"> ETNIA: 
+    Branco <input type="radio" name="checkbox-name1" value="1">
+    Pardo <input type="radio" name>
+</label>
+    
+    <button type="submit">Hello there</button><button type="reset">Reset</button>
 </form>
