@@ -15,34 +15,45 @@
     <!--Insere o arquivo CSS do Bootstrap-->
     <link rel="stylesheet" href="styles.css">
     <!--Insere o arquivo CSS pessoal-->
+    <script src="components/header.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-    <h1>Jogando o Machado - Portfólio de José Lucas</h1> <!--Título principal da sua página. Importante para SEO-->
-    <h2><strong>Início</strong></h2>
+    <header-component></header-component>
     <br> <!--Quebra de linha-->
-    <h3><b>Projetos</b></h2>
-        <a href="projetoc.html">Projeto: C</a><br>
-        <a href="projetofrontend.html">Projeto: Front-End</a><br>
-        <a href="projetoCsharp.html">Projeto: C#</a><br>
-        <a href="projetoJava.html">Projeto: Java</a><br>
-        <a href="projetoUni.html">Projeto: Graduação em Engenharia de Software</a><br>
-        <!--A tag <b> é menos forte que <strong>-->
-        <!--A tag <u> é menos forte que a <ins>-->
-        <h3><b><a href="historicoescolar.html">Histórico Escolar</a></b></h3>
-        <h3><b>Currículo</b></h3>
-        <h3><b><a href="formulariocontato.html">Contato</a></b></h3>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-            integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-            crossorigin="anonymous"></script>
-        <!--Insere Scripts do Bootstrap-->
-        <script>
-            src = "scripts.js"
-            <!--Insere scripts pessoais-->
-        </script>
+    <main>
+        <session>
+            <h2><b>Projetos</b></h2>
+            <a href="projetoc.html">Projeto: C</a><br>
+            <a href="projetofrontend.html">Projeto: Front-End</a><br>
+            <a href="projetoCsharp.html">Projeto: C#</a><br>
+            <a href="projetoJava.html">Projeto: Java</a><br>
+            <a href="projetoUni.html">Projeto: Graduação em Engenharia de Software</a><br>
+        </session>
+        <br>
+        <session>
+            <!--A tag <b> é menos forte que <strong>-->
+            <!--A tag <u> é menos forte que a <ins>-->
+            <h3><b><a href="historicoescolar.html">Histórico Escolar</a></b></h3>
+            <h3><b>Currículo</b></h3>
+        </session>
+    </main>
+    <br>
+    <footer>
+        <h3><b><a href="contato.html">Contato</a></b></h3>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+    <!--Insere Scripts do Bootstrap-->
+    <script>
+        src = "scripts.js"
+        <!--Insere scripts pessoais-->
+    </script>
 </body>
 
 </html>
