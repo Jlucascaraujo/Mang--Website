@@ -1,33 +1,19 @@
-.body {
-  background-color: rgb(255, 150, 100);
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
 }
 
-.upperNav {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 50px;
-  background-color:rgb(0, 255, 106);
+session a {
+  text-decoration: dashed;
+  color: #46070f;
+  margin: 5px;
+  padding: 10px;
+}
+
+session a:hover {
   padding: 5px;
-  border-bottom: 10px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center !important;
-}
-
-.lowerNav {
-  position: fixed;
-  top: inherit;
-  width: 100%;
-  height: 25px;
-  background-color: aquamarine;
-  padding: 2.5px;
-  border-bottom: 2.5px;
-
-}
-
-.logoImgNavBar {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
+  text-decoration: underline;
+  color: #edc79b;
+  background-color: #46070f;
+  border-radius: 5px;
 }
