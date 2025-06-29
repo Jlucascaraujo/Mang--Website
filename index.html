@@ -1,5 +1,5 @@
 ---
-title: Home 
+title: Home
 ---
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,29 +10,24 @@ title: Home
 </head>
 
 <body>
-    <header-component></header-component>
+    {% include header.html %}
     <div class="wrapper">
         <br> <!--Quebra de linha-->
         <main>
             <session>
-                <h2><b>Projetos</b></h2>
-                <a href="projetoc.html">Projeto: C</a><br>
-                <a href="projetofrontend.html">Projeto: Front-End</a><br>
-                <a href="projetoCsharp.html">Projeto: C#</a><br>
-                <a href="projetoJava.html">Projeto: Java</a><br>
-                <a href="projetoUni.html">Projeto: Graduação em Engenharia de Software</a><br>
-            </session>
-            <br>
-            <session>
-                <!--A tag <b> é menos forte que <strong>-->
-                <!--A tag <u> é menos forte que a <ins>-->
-                <h3><b><a href="historicoescolar.html">Histórico Escolar</a></b></h3>
-                <h3><b>Currículo</b></h3>
+                <div id="msgInicial">
+                    <ul id="textMsgInicial">
+                        <li>Olá,</li>
+                        <li>Eu sou <span style="color: #BF281B;">José Lucas</span></li>
+                        <li>um Engenheiro de Software.</li>
+                        <li><a id="botaoContato" href="contato.html">Vamos entrar em contato!</a></li>
+                    </ul>
+                </div>
             </session>
         </main>
         <br>
     </div>
-    <footer-component></footer-component>
+    {% include footer.html %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

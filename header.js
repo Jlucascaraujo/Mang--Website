@@ -13,7 +13,7 @@ class Header extends HTMLElement {
                 justify-content: center;
                 align-items: center;
                 background-color: #46070f;
-                color: #edc79c;
+                color: #BF281B;
             }
             #mainTitle {
                 text-align: center;
@@ -85,17 +85,7 @@ class Header extends HTMLElement {
             }
             
         </style>
-        <header>
-            <div id="mainTitle" class="trueHeader"><h1 class="text-nowrap">Jogando o Machado</h1> <!--Título principal da sua página. Importante para SEO--></div>
-            <div id="subTitle" class="trueHeader"><p class="text-nowrap">Por José Lucas</p></div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
+  
         `;
     }
 }

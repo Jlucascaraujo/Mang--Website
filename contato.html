@@ -1,33 +1,39 @@
---- 
+---
 title: Contato
 ---
 <!DOCTYPE html>
 <html lang="pt-br">
 <!--Define a linguagem do website para a Lingua Portuguesa-->
+
 <head>
     {% include head.html %}
 </head>
 
 <body>
-    <header-component></header-component>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-        <h2><strong>Início</strong></h2>
-    </nav>
-    <br> <!--Quebra de linha-->
-    <main>
-        <h2>Entre em contato!</h2>
-        <h5>Email:</h3>
-        <p>jlucascaraujo@gmail.com</p>
-        <h5>Outras:</h5>
-        <p>https://linktr.ee/jlucascaraujo</p>
-    </main>
-    <br>
-    <footer-component></footer-component>
+    {% include header.html %}
+
+    <form id="contact-form" method="POST" action="sendmail.php">
+        <div class="form-row form-error" style="display:none;"></div>
+        <div class="form-row">
+            <label for="contact-form-name">Name:</label>
+            <input id="contact-form-name" class="form-input" type="text" name="name" required>
+        </div>
+        <div class="form-row">
+            <label for="contact-form-email">Email:</label>
+            <input id="contact-form-email" class="form-input" type="email" name="email" required>
+        </div>
+        <div class="form-row">
+            <label for="contact-form-phone">Phone:</label>
+            <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+        </div>
+        <div class="form-row">
+            <label for="contact-form-message">Message:</label>
+            <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

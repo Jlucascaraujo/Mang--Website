@@ -29,9 +29,7 @@ class Footer extends HTMLElement {
                 padding: 5px;
             }
         </style>
-    <footer>
-        <h3><b><a href="contato.html">Contato</a></b></h3>
-    </footer>
+
         `;
     }
 }
