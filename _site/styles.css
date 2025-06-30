@@ -14,6 +14,50 @@
   font-style: normal;
 }
 
+.old-standard-tt-regular {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.old-standard-tt-bold {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
 /*Seção principal da página*/
 body {
   height: 100vh;
@@ -37,15 +81,18 @@ body {
 }
 
 #textMsgInicial {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Courier Prime", monospace;
   font-weight: bold;
   display: inline-block;
+  block-size: auto;
   overflow: hidden;
   width: 100%;
   font-size: 36px;
   list-style-type: none;
   padding: 20px;
 }
+
+
 
 #botaoContato {
   text-decoration: underline;
@@ -56,35 +103,50 @@ body {
 .trueHeader {
   padding: 2em;
   display: grid;
-  grid-column: 1;
+  grid-column: 2;
+  grid-template-columns: 15vw 1fr 15vw;
   grid-row: 2;
-  height: 10vh;
+  grid-template-rows: auto auto;
+  height: auto;
+  min-height: 15vh;
   align-items: center;
+  text-align: center;
   background-color: #ede0d0;
   color: #04241C;
   border-bottom: 2px solid #04241C;
-  text-align: center;
 }
 
 /*Header => Title & Subtitle*/
 #mainTitle {
+  grid-column: 2;
+  grid-row: 1;
   font-size: 45px;
   text-transform: uppercase;
-  margin: 15vh;
   font-family: "Limelight", sans-serif;
-  padding-bottom: 10px;
-  overflow: hidden;
-  align-self: center;
+}
+
+#websiteVersion {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  text-align: right;
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #042400;
+  opacity: 0.5;
 }
 
 /*Header => Subtitle*/
 #subTitle {
+  grid-column: 1 / -1;
+  grid-row: 2;
   font-size: 18px;
   color: #042400;
   opacity: 0.5;
-  flex: 10%;
   padding: 0.5em;
 }
+
 
 /*Nav Bar*/
 #mainNav {
@@ -146,6 +208,7 @@ footer a:hover {
   border-radius: 5px;
   padding: 5px;
 }
+
 /*Contato > Formulário*/
 .form-row {
   margin-bottom: 10px;
