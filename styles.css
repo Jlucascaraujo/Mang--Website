@@ -60,63 +60,25 @@
 
 /*Seção principal da página*/
 body {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   background-color: #ede0d0;
 }
 
 .wrapper {
+  position: relative;
   display: block;
-}
-
-/*Mensagem de Introdução do Portfólio*/
-#mainPage {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1;
-  gap: 20px;
-  align-items: start;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-#msgInicial {
-  border-right: 2px solid #04241C;
-  padding-right: 20px;
-}
-
-#textMsgInicial {
-  font-family: "Courier Prime", monospace;
-  font-weight: bold;
-  grid-column: 1;
-  grid-row: 1;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 20px;
-}
-
-#botaoContato {
-  text-decoration: underline;
-  color: #04241C;
-}
-
-#textoSecundario {
-  font-family: "Courier Prime", monospace;
-  font-weight: bold;
-
-  grid-column: 2;
-  grid-row: 1;
-
-  overflow: hidden;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 20px;
+  max-height: fit-content;
+  min-height: min-content;
+  margin: 2em;
+  padding-bottom: 15vh;
 }
 
 /*Header*/
 header {
   width: 100%;
 }
+
 #titleSection {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -131,6 +93,11 @@ header {
 #mainTitle {
   font-family: "Limelight", sans-serif;
   font-size: 5em;
+}
+
+#mainTitle a {
+  text-decoration: none;
+  color: #04241C;;
 }
 
 #versionNTime {
@@ -179,7 +146,7 @@ header {
   margin: auto;
 }
 
-header a {
+.navItem {
   box-shadow: inset 0 0 0 0 #ede0d0;
   font-weight: 700;
   margin: 0 25px;
@@ -191,12 +158,57 @@ header a {
   transition: color .2s ease-in-out, box-shadow .2s ease-in-out, padding .2s ease-in-out, border-radius .2s ease-in-out;
 }
 
-header a:hover {
+.navItem:hover {
   color: #ede0d0;
   box-shadow: inset 100px 0 0 0 #04241C;
   text-decoration: underline;
   border-radius: 5px;
   padding: 5px;
+}
+
+/*Mensagem de Introdução do Portfólio*/
+#mainPage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  gap: 20px;
+  align-items: start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#msgInicial {
+  border-right: 2px solid #04241C;
+  padding-right: 20px;
+}
+
+#textMsgInicial {
+  font-family: "Courier Prime", monospace;
+  font-weight: bold;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 20px;
+}
+
+#botaoContato {
+  text-decoration: underline;
+  color: #BF281B;
+}
+
+#textoSecundario {
+  font-family: "Courier Prime", monospace;
+  font-weight: bold;
+
+  grid-column: 2;
+  grid-row: 1;
+
+  overflow: hidden;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 20px;
 }
 
 footer {
@@ -207,7 +219,9 @@ footer {
   bottom: 0;
   height: 100px;
   justify-items: left;
+  margin-top: 5vh;
   padding: 15px;
+  padding-top: 50px;
   border-top: solid 3px #04241C;
 }
 
@@ -237,53 +251,107 @@ footer a:hover {
   color: red;
 }
 
+#listaProjetos {
+  list-style-type: none;
 
+}
+
+#listaProjetos a {
+  text-decoration: none;
+  color: #BF281B;
+}
+
+#projetosMainBody {
+  font-family: "Courier Prime", monospace;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+#listaProjetos {
+  list-style-type: none;
+
+}
+
+#listaProjetos a {
+  text-decoration: none;
+  color: #BF281B;
+}
+
+#tituloProjetos {
+  margin-left: 2vw;
+  text-transform: uppercase;
+}
+
+#projetosMainBody p {
+  margin-left: 3vw;
+}
+
+.content {
+  padding: 5vh 5vw 5vh 5vw;
+}
 @media (max-width: 868px) {
-  #msgInicial {
-    display: block;
-    margin: 2vh 2vh;
-    border: 2px solid #04241C;
-    border-radius: 10px;
-    border-style: outset;
-    box-shadow: 4px 4px #04241C;
-    height: min-content;
-    width: max-content;
-  }
-
-  #textMsgInicial {
-    font-family: "Noto Sans", sans-serif;
-    display: inline-block;
-    overflow: hidden;
+  header {
     width: 100%;
-    font-size: 1em;
-    list-style-type: none;
-    padding: 20px;
   }
 
-  .trueHeader {
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
-    align-items: center;
-    background-color: #ede0d0;
-    color: #04241C;
-    border-bottom: 2px solid #04241C;
+  #titleSection {
+    grid-template-columns: 30% 1fr 30%;
+    gap: 0.5em;
+    width: 80%;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    margin: 1rem;
+  }
+
+  #versionNTime {
+    font-size: 0.8em;
+    overflow-wrap: break-word;
+  }
+
+  #titles {
+    grid-column: 2;
     text-align: center;
   }
 
   #mainTitle {
-    text-transform: uppercase;
-    font-size: 1.2em;
-    font-family: "Limelight", sans-serif;
-    align-self: center;
-    overflow: hidden;
+    font-size: 2em;
+    max-width: min-content;
   }
 
-  /*Header => Subtitle*/
-  #subTitle {
-    font-size: 1em;
-    color: #042400;
-    opacity: 0.5;
-    flex: 10%;
+  #profilePic {
+    max-width: fit-content;
+
   }
+
+  #mainPage {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #msgInicial {
+    border-right: 2px;
+    padding-right: 20px;
+  }
+
+  #textMsgInicial {
+    font-size: 1.3em;
+    padding: 20px;
+  }
+
+  #botaoContato {
+    text-decoration: underline;
+  }
+
+  #textoSecundario {
+    font-size: 1.3em;
+    padding: 20px;
+  }
+
+  #projetosMainBody {
+    font-size: 1.2em;
+  }
+
 }
