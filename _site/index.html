@@ -37,14 +37,18 @@
 
 <body>
     <header>
-    <div id="websiteVersion">
-        Vol. 1.0.
-        <p><span id="access-time"></span></p>
-    </div>
-    <div class="trueHeader">
-        <h1 id="mainTitle" class="text-nowrap">Portfólio News</h1>
-        <h2 id="subTitle">de José Lucas</h2>
-        <!--Título principal da sua página. Importante para SEO-->
+    <div id="titleSection" class="container">
+        <div id="versionNTime" class="item">
+            <p>Vol. 1.0.</p>
+            <p><span id="access-time"></span></p>
+        </div>
+        <div id="titles" class="item">
+            <h1 id="mainTitle" class="subitem">Portfólio News</h1>
+            <!--Título principal da sua página. Importante para SEO-->
+        </div>
+        <div class="item">
+            <img id="profilePic" class="sub-item" src="/%20/assets/images/profilePic.png" alt="Profile Picture">
+        </div>
     </div>
     <nav id="mainNav">
         <ul>
@@ -57,7 +61,7 @@
     <div class="wrapper">
         <br> <!--Quebra de linha-->
         <main>
-            <session>
+            <session id="mainPage">
                 <div id="msgInicial">
                     <ul id="textMsgInicial">
                         <li>Olá,</li>
@@ -65,6 +69,11 @@
                         <li>um Engenheiro de Software.</li>
                         <li><a id="botaoContato" href="contato.html">Vamos entrar em contato!</a></li>
                     </ul>
+                </div>
+                <div id="textoSecundario">
+                    <p class="textoStatusAtual">Relativamente iniciante na área de Engenharia de Software,</p>
+                    <p class="textoStatusAtual">estudando, atualmente, C e Front-End.</p>
+                    <p class="textoStatusAtual">Principalmente cursando Engenharia de Software pela UniCesumar</p>
                 </div>
             </session>
         </main>

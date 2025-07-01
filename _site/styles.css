@@ -69,83 +69,98 @@ body {
 }
 
 /*Mensagem de Introdução do Portfólio*/
+#mainPage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  gap: 20px;
+  align-items: start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #msgInicial {
-  display: block;
-  margin: 10vh 10vh;
-  border: 2px solid #04241C;
-  border-radius: 10px;
-  border-style: outset;
-  box-shadow: 4px 4px #04241C;
-  height: min-content;
-  width: max-content;
+  border-right: 2px solid #04241C;
+  padding-right: 20px;
 }
 
 #textMsgInicial {
   font-family: "Courier Prime", monospace;
   font-weight: bold;
-  display: inline-block;
-  block-size: auto;
-  overflow: hidden;
-  width: 100%;
-  font-size: 36px;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.5em;
   list-style-type: none;
   padding: 20px;
 }
-
-
 
 #botaoContato {
   text-decoration: underline;
   color: #04241C;
 }
 
-/*Header*/
-.trueHeader {
-  padding: 2em;
-  display: grid;
-  grid-column: 2;
-  grid-template-columns: 15vw 1fr 15vw;
-  grid-row: 2;
-  grid-template-rows: auto auto;
-  height: auto;
-  min-height: 15vh;
-  align-items: center;
-  text-align: center;
-  background-color: #ede0d0;
-  color: #04241C;
-  border-bottom: 2px solid #04241C;
-}
-
-/*Header => Title & Subtitle*/
-#mainTitle {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 45px;
-  text-transform: uppercase;
-  font-family: "Limelight", sans-serif;
-}
-
-#websiteVersion {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: end;
-  text-align: right;
-  font-size: 1em;
-  font-family: 'Courier New', Courier, monospace;
+#textoSecundario {
+  font-family: "Courier Prime", monospace;
   font-weight: bold;
-  color: #042400;
-  opacity: 0.5;
+
+  grid-column: 2;
+  grid-row: 1;
+
+  overflow: hidden;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 20px;
 }
 
-/*Header => Subtitle*/
-#subTitle {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  font-size: 18px;
-  color: #042400;
-  opacity: 0.5;
-  padding: 0.5em;
+/*Header*/
+header {
+  width: 100%;
 }
+#titleSection {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+#mainTitle {
+  font-family: "Limelight", sans-serif;
+  font-size: 5em;
+}
+
+#versionNTime {
+  grid-column: 1;
+  font-family: "Courier Prime", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid #04241C;
+  border-radius: 10px;
+  border-style: outset;
+  box-shadow: 4px 4px #04241C;
+  padding: 10px;
+}
+
+#titles {
+  grid-column: 2;
+  text-align: center;
+}
+
+#profilePic {
+  grid-column: 3;
+  max-width: 113.39px;
+  max-height: 151.181px;
+  display: block;
+  border: 2px solid #04241C;
+  border-radius: 10px;
+  border-style: outset;
+  box-shadow: 4px 4px #04241C;
+}
+
 
 
 /*Nav Bar*/
