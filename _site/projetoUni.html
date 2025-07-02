@@ -7,7 +7,7 @@
 <!--Meta para definir UTF-8, que reconhece caracteres da Lingua Portuguesa.-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--Meta para definir a largura da página.-->
-<meta name="description" content="Portfólio profissional ALPHA - José Lucas">
+<meta name="description" content="Portfólio profissional BETA - José Lucas">
 <!--Meta que define a descrição do website-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -28,51 +28,75 @@
     rel="stylesheet">
 <!--Inserindo origem de fontes da google-->
 <link rel="stylesheet" href="styles.css">
-<script src="/assets/js/main.js"></script>
 <!--Insere o arquivo CSS pessoal-->
+<script src="/assets/js/main.js"></script>
+<!--JS inserido no Jekyll-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--Biblioteca jQuery-->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<!--Biblioteca Typed-->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!--Favicon-->
 <title>Projeto Graduação em Eng. Software. | Jogando o Machado</title>
 </head>
 
 <body>
-    <header-component></header-component>
-    <nav>
+    <header>
+    <div id="titleSection" class="container">
+        <div id="versionNTime" class="item">
+            <p>Vol. 1.0.</p>
+            <p><span id="access-time"></span></p>
+        </div>
+        <div id="titles" class="item">
+            <h1 id="mainTitle" class="subitem"><a href="index.html">Portfólio News</a></h1>
+            <!--Título principal da sua página. Importante para SEO-->
+        </div>
+        <div class="item">
+            <img id="profilePic" class="sub-item" src="/assets/images/profilePic.png" alt="Profile Picture">
+        </div>
+    </div>
+    <nav id="mainNav">
         <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a class="navItem" href="index.html">Início</a></li>
+            <li><a class="navItem" href="contato.html">Contato</a></li>
+            <li><a class="navItem" href="projetos.html">Projetos</a></li>
         </ul>
-        <h2><strong>Início</strong></h2>
     </nav>
+</header>
     <br> <!--Quebra de linha-->
-    <main>
-        <h4>Projeto Graduação em Engenharia de Software</h4>
-        <dl>
-            <dt>Progresso:</dt>
-            <dd><mark>3º Semestre (Cursando)</mark></dd>
-        </dl>
-        <ol>
-            <li>Programação Front-End I</li>
-            <li>Estrutura de Dados I</li>
-            <li>Materias Passadas:
-                <ol>
-                    <li>Análise e Projeto Orientado a Objetos</li>
-                    <li>Mentalidade Criativa e Empreendedora</li>
-                    <li>Linguagem e Técnicas de Programação</li>
-                    <li>Algoritmos e Lógica de Programação</li>
-                    <li>Produção do Conhecimento Científico, Tecnológico e Disrupção</li>
-                    <li>Engenharia de Software</li>
-                    <li>Matemática Aplicada à Computação</li>
-                    <li>Projeto de Vida GO</li>
-                    <li>Redes de Computadores</li>
-                    <li>Fundamentos e Arquitetura de Computadores</li>
-                </ol>
-            </li>
-        </ol>
+    <main id="uniPage">
+        <h4 id="uniPageTitle">Projeto Graduação em Engenharia de Software</h4>
+        <h5>Progresso:</h3>
+            <h6>3º Semestre Cursando</h6>
+            <p class="uniSubject" onclick="displayText()">Programação Front-End I</p>
+                <div id="textField1" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Estrutura de Dados I</p>
+                <div id="textField2" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Análise e Projeto Orientado a Objetos</p>
+                <div id="textField3" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Mentalidade Criativa e Empreendedora</p>
+                <div id="textField4" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Linguagem e Técnicas de Programação</p>
+                <div id="textField5" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Algoritmos e Lógica de Programação</p>        
+                <div id="textField6" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Produção do Conhecimento Científico, Tecnológico e Disrupção</p>    
+                <div id="textField7" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Engenharia de Software</p>        
+                <div id="textField8" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Matemática Aplicada à Computação</p>
+                <div id="textField9" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Projeto de Vida GO</p>
+                <div id="textField0" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Redes de Computadores</p>
+                <div id="textField10" style="display: none;">Hello There!</div>    
+            <p class="uniSubject" onclick="displayText()">Fundamentos e Arquitetura de Computadores</p>
+                <div id="textField11" style="display: none;">Hello There!</div> 
     </main>
     <br>
-    <footer-component></footer-component>
+    <footer>
+    <h3><b><a href="contato.html">Contato</a></b></h3>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

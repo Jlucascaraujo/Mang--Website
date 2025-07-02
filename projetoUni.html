@@ -1,4 +1,4 @@
---- 
+---
 title: Projeto Graduação em Eng. Software.
 ---
 <!DOCTYPE html>
@@ -10,43 +10,39 @@ title: Projeto Graduação em Eng. Software.
 </head>
 
 <body>
-    <header-component></header-component>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-        <h2><strong>Início</strong></h2>
-    </nav>
+    {% include header.html %}
     <br> <!--Quebra de linha-->
-    <main>
-        <h4>Projeto Graduação em Engenharia de Software</h4>
-        <dl>
-            <dt>Progresso:</dt>
-            <dd><mark>3º Semestre (Cursando)</mark></dd>
-        </dl>
-        <ol>
-            <li>Programação Front-End I</li>
-            <li>Estrutura de Dados I</li>
-            <li>Materias Passadas:
-                <ol>
-                    <li>Análise e Projeto Orientado a Objetos</li>
-                    <li>Mentalidade Criativa e Empreendedora</li>
-                    <li>Linguagem e Técnicas de Programação</li>
-                    <li>Algoritmos e Lógica de Programação</li>
-                    <li>Produção do Conhecimento Científico, Tecnológico e Disrupção</li>
-                    <li>Engenharia de Software</li>
-                    <li>Matemática Aplicada à Computação</li>
-                    <li>Projeto de Vida GO</li>
-                    <li>Redes de Computadores</li>
-                    <li>Fundamentos e Arquitetura de Computadores</li>
-                </ol>
-            </li>
-        </ol>
+    <main id="uniPage">
+        <h4 id="uniPageTitle">Projeto Graduação em Engenharia de Software</h4>
+        <h5>Progresso:</h3>
+            <h6>3º Semestre Cursando</h6>
+            <p class="uniSubject" onclick="displayText()">Programação Front-End I</p>
+                <div id="textField1" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Estrutura de Dados I</p>
+                <div id="textField2" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Análise e Projeto Orientado a Objetos</p>
+                <div id="textField3" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Mentalidade Criativa e Empreendedora</p>
+                <div id="textField4" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Linguagem e Técnicas de Programação</p>
+                <div id="textField5" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Algoritmos e Lógica de Programação</p>        
+                <div id="textField6" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Produção do Conhecimento Científico, Tecnológico e Disrupção</p>    
+                <div id="textField7" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Engenharia de Software</p>        
+                <div id="textField8" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Matemática Aplicada à Computação</p>
+                <div id="textField9" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Projeto de Vida GO</p>
+                <div id="textField0" style="display: none;">Hello There!</div>
+            <p class="uniSubject" onclick="displayText()">Redes de Computadores</p>
+                <div id="textField10" style="display: none;">Hello There!</div>    
+            <p class="uniSubject" onclick="displayText()">Fundamentos e Arquitetura de Computadores</p>
+                <div id="textField11" style="display: none;">Hello There!</div> 
     </main>
     <br>
-    <footer-component></footer-component>
+    {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
