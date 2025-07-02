@@ -61,37 +61,44 @@
     <div class="wrapper">
         <div class="content">
             <h1>Formulário de Contato</h1>
-            <form>
+            <form id="form">
                 <div>
-                    <input type="text" class="inputs" placeholder="Nome completo" name="" id="">
+                    <input type="text" class="inputs" placeholder="Nome completo" required >
                     <span class="spanRequired">Nome deve ter no mínimo 5 caracteres.</span>
                 </div>
                 <div>
-                    <input type="email" class="inputs" placeholder="exemplo@exemplo.com" name="" id="">
+                    <input type="email" class="inputs" placeholder="exemplo@exemplo.com" required>
                     <span class="spanRequired">Digite um email válido.</span>
                 </div>
                 <div>
-                    <input type="text" class="inputs" placeholder="Assunto" name="" id="">
+                    <input type="text" class="inputs" placeholder="Assunto" required>
                     <span class="spanRequired">Digite um assunto.</span>
                 </div>
-                <textarea name="descricao" id="descricao" cols="25" rows="10" placeholder="Descrição"></textarea>
-                <p>Conhecimentos</p>
+                <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10" placeholder="Descrição" required></textarea>
+                <div><p>Conhecimentos Relevantes</p></div>
                 <div class="boxSelect">
-                    <input type="radio" id="c" value="c" name="conhecimentos">
+                    <input type="checkbox" id="c" value="c" name="conhecimentos">
                     <label for="c">Linguagem C</label>
-                    <input type="radio" id="java" value="java" name="conhecimentos">
+                    <input type="checkbox" id="java" value="java" name="conhecimentos">
                     <label for="java">Linguagem Java</label>
-                    <input type="radio" id="csharp" value="csharp" name="conhecimentos">
+                    <input type="checkbox" id="csharp" value="csharp" name="conhecimentos">
                     <label for="csharp">Linguagem C#</label>
-                    <input type="radio" id="htmlcss" value="htmlcss" name="conhecimentos">
+                    <input type="checkbox" id="htmlcss" value="htmlcss" name="conhecimentos">
                     <label for="htmlcss">Linguagem HTML & CSS</label>
-                    <input type="radio" id="js" value="js" name="conhecimentos">
+                    <input type="checkbox" id="js" value="js" name="conhecimentos">
                     <label for="js">Linguagem JS</label>
                 </div>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
     <!--https://www.youtube.com/watch?v=JgM2C9b12EU: Formulário Simples-->
+    <!--https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css-->
+    <!--https://www.youtube.com/watch?v=YcTkoIAi0Bg Validação JS-->
+    <!--https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction-->
+    <!--https://developer.mozilla.org/pt-BR/docs/Web/API/Document/DOMContentLoaded_event-->
+    <!--https://javascript.info/onload-ondomcontentloaded-->
+    <!--https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener-->
     <footer>
     <h3><b><a href="contato.html">Contato</a></b></h3>
 </footer>

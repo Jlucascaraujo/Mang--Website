@@ -59,6 +59,11 @@
 
 
 /*Seção principal da página*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   position: relative;
   height: 100%;
@@ -97,7 +102,8 @@ header {
 
 #mainTitle a {
   text-decoration: none;
-  color: #04241C;;
+  color: #04241C;
+  ;
 }
 
 #versionNTime {
@@ -288,9 +294,81 @@ footer a:hover {
 }
 
 .content {
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 2rem;
+  font-family: "Courier Prime", monospace;
+  border: 3px solid #04241C;
+  border-style: outset;
+  box-shadow: 4px 4px #04241C;
+  border-radius: 1rem;
+  min-width: 50%;
+  max-width: 75%;
+  min-height: fit-content;
+  overflow: auto;
 }
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.content div {
+  margin: 0.1rem;
+  padding: 0.5rem;
+}
+
+.inputs {
+  padding: 0.8rem 0.3rem;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #f1ede9;
+  border: 3px solid #04241C;
+  color: #04241C;
+  width: 100%;
+  box-sizing: border-box;
+  transition: .2s;
+}
+
+.inputs:focus {
+  border-color: #05614a;
+}
+
+.spanRequired {
+  font-size: 1rem;
+  display: none;
+}
+
+button[type="submit"] {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  background-color: #04241C;
+  color: #ede0d0;
+}
+
+button[type="submit"]:hover {
+  background-color: #05614a;
+}
+
 @media (max-width: 868px) {
+  .wrapper {
+    margin: 1em;
+  }
+
   header {
     width: 100%;
   }
@@ -353,5 +431,28 @@ footer a:hover {
   #projetosMainBody {
     font-size: 1.2em;
   }
+
+  .content {
+  padding: 1rem;
+  min-width: 90vw;
+  max-width: 80vw;
+  min-height: fit-content;
+  overflow: auto;
+}
+
+.boxSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type="checkbox"] {
+  -ms-transform: scale(3);
+  -webkit-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+  padding: 10px;
+}
 
 }
