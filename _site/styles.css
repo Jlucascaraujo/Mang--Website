@@ -384,10 +384,6 @@ button[type="submit"]:hover {
   text-transform: uppercase;
 }
 
-#uniPage dl {
-
-}
-
 /*Controle responsivo da página através do @media*/
 @media (max-width: 868px) {
   .wrapper {
