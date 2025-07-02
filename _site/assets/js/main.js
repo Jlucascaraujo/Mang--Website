@@ -71,4 +71,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fields[2].addEventListener('input', validateSubject);
   }
 
+  var options = {
+    strings: [
+      "Relativamente iniciante na área de Engenharia de Software, estudando, atualmente, C e Front-End. Principalmente cursando Engenharia de Software pela UniCesumar"
+    ],
+    typeSpeed: 5,
+    contentType: 'html'
+  };
+
+  setTimeout(function() {
+    var typed = new Typed('.textoStatusAtual', options);
+  }, 500);
+
 });
