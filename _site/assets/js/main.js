@@ -93,4 +93,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       text.style.display = "none";
     }    
-  }
+  }
+
