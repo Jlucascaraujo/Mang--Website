@@ -217,6 +217,7 @@ header {
   padding: 20px;
 }
 
+/*Seção do Footer*/
 footer {
   background-color: #ede0d0;
   position: fixed;
@@ -267,6 +268,7 @@ footer a:hover {
   color: #BF281B;
 }
 
+/*Página de projetos*/
 #projetosMainBody {
   font-family: "Courier Prime", monospace;
   font-weight: bold;
@@ -293,6 +295,7 @@ footer a:hover {
   margin-left: 3vw;
 }
 
+/*Formulário*/
 .content {
   padding: 2rem;
   font-family: "Courier Prime", monospace;
@@ -364,6 +367,7 @@ button[type="submit"]:hover {
   background-color: #05614a;
 }
 
+/*Página do Progresso da Graduação*/
 #uniPage {
   padding: 1.5rem;
   margin-bottom: 3rem;
@@ -384,6 +388,7 @@ button[type="submit"]:hover {
 
 }
 
+/*Controle responsivo da página através do @media*/
 @media (max-width: 868px) {
   .wrapper {
     margin: 1em;
