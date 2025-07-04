@@ -3,32 +3,35 @@ title: Home
 ---
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
 
-<head> <!--Head incluida através do Jekyll-->
+<head>
     {% include head.html %}
 </head>
 
-<body> <!--Header incluso através do Jekyll-->
+<body>
     {% include header.html %}
     <div class="wrapper">
-        <br> <!--Quebra de linha-->
-        <main>
-            <session id="mainPage">
-                <div id="msgInicial">
-                    <ul id="textMsgInicial">
-                        <li>Olá,</li>
-                        <li>Eu sou <span style="color: #BF281B;">José Lucas</span></li> 
-                        <li>um Engenheiro de Software.</li>
-                        <li><a id="botaoContato" href="contato.html">Vamos entrar em contato!</a></li>
-                    </ul>
-                </div>
-                <div id="textoSecundario">
-                    <noscript> <!--Efeito de digitação usando o jQuery-->
-                        <h2>Relativamente iniciante na área de Engenharia de Software, estudando, atualmente, C e Front-End. Principalmente cursando Engenharia de Software pela UniCesumar</h2>
-                    </noscript>
-                    <h2 class="textoStatusAtual"></h2>
-                </div>
+        <main id="mainPage">
+            <session id="mensagensPgMain">
+                <h2 id="textMsgInicial">Olá, sou <span id="nomeDestaque">José Lucas</span>, focado em Front-End,
+                    aspirante a FullStack.</h1>
+                    <div id="textoSecundario">
+                        <noscript>
+                            <p>Estou me formando em Engenharia de Software e estudando programação pela Udemy, Dio.me e
+                                claro, YouTube. Procuro oportunidades de Estágio 100% remoto ou no Distrito Federal</p>
+                        </noscript>
+                        <p class="textoStatusAtual"></p>
+                    </div>
+            </session>
+            <session id="technicalKnowHowIcons">
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
+                <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
             </session>
         </main>
         <br>

@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var options = {
     strings: [
-      "Relativamente iniciante na área de Engenharia de Software, estudando, atualmente, C e Front-End. Principalmente cursando Engenharia de Software pela UniCesumar"
+      "Estou me formando em Engenharia de Software e estudando programação pela Udemy, Dio.me e claro, YouTube. Procuro oportunidades de Estágio 100% remoto ou no Distrito Federal"
     ],
     typeSpeed: 5,
     contentType: 'html'
