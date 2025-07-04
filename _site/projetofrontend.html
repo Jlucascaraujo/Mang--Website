@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
-
 <head>
     <meta charset="UTF-8">
 <!--Meta para definir UTF-8, que reconhece caracteres da Lingua Portuguesa.-->
@@ -39,20 +37,38 @@
 <!--Favicon-->
 <title>Projeto Front-End | Jogando o Machado</title>
 </head>
-
 <body>
-    <header-component></header-component>
-    <nav>
+    <header>
+    <div id="titleSection" class="container">
+        <div id="versionNTime" class="item">
+            <p>Vol. 1.0.</p>
+            <p><span id="access-time"></span></p>
+        </div>
+        <div id="titles" class="item">
+            <h1 id="mainTitle" class="subitem"><a href="index.html">Portfólio News</a></h1>
+            <!--Título principal da sua página. Importante para SEO-->
+        </div>
+        <div class="item">
+            <img id="profilePic" class="sub-item" src="/assets/images/profilePic.png" alt="Profile Picture">
+        </div>
+    </div>
+    <nav id="mainNav">
         <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a class="navItem" href="index.html">Início</a></li>
+            <li><a class="navItem" href="contato.html">Contato</a></li>
+            <li><a class="navItem" href="projetos.html">Projetos</a></li>
+            <li><a class="navItem" href="historicoescolar">Histórico Escolar</a></li>
         </ul>
-        <h2><strong>Início</strong></h2>
     </nav>
-    <br> <!--Quebra de linha-->
+</header>
     <main>
-        <h4>Projeto: Front-End</h4>
+        <h1>Projeto: Front-End</h1>
+        <h2>Test Title</h2>
+        <h3>Head 3</h3>
+        <h4>Head 4</h4>
+        <h5>Head 5</h5>
+        <h6>Head 6</h6>
+        <p>Hello There!</p>
         <dl>
             <dt>Progresso:</dt>
             <dd><mark>Iniciante</mark></dd>
@@ -69,7 +85,9 @@
         <br>
     </main>
     <br>
-    <footer-component></footer-component>
+    <footer>
+    <h3><b><a href="contato.html">Contato</a></b></h3>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
