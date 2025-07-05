@@ -9,16 +9,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-
-
   const form = document.getElementById('form');
   const fields = document.querySelectorAll('[required]');
   const spans = document.querySelectorAll('.spanRequired');
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const nameInput = fields[0];
-
-  
 
   function validateName() {
     if (fields[0].value.length < 5) {
@@ -37,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fields[0].addEventListener('input', validateName);
   }
 
-    function validateEmail() {
+  function validateEmail() {
     if (!emailRegex.test(fields[1].value)) {
       fields[1].style.border = '3px solid #e63636';
       spans[1].style.display = 'block';
@@ -79,19 +75,29 @@ document.addEventListener('DOMContentLoaded', function () {
     contentType: 'html'
   };
 
-  setTimeout(function() {
+  setTimeout(function () {
     var typed = new Typed('.textoStatusAtual', options);
   }, 500);
 
-});
+  let rodada = 0;
+  const totalPerguntas = 17;
 
-  function displayText(div) {
-    var text = document.getElementById("textField");
+  const enunciado = document.getElementById("enunciado");
+  enunciado.innerHTML = "Quem descobriu o Brasil?";
 
-    if(text.style.display === "none") {
-      text.style.display = "block";
-    } else {
-      text.style.display = "none";
-    }    
+  const frutas = ["banana", "limão", "pera", "jaca"];
+  console.log(frutas[2]);
+
+  const supermanID = {
+    pergunta: "Qual o nome de batismo do Superman?",
+    alternativas: ["Bruce Wayne", "Wally West", "Clark Kent", "Speedy Gonzales"],
+    resposta: "Clark Kent"
   }
+
+  const novaPergunta = {};
+
+  novaPergunta.pergunta = "Quantos números diferentes podem ser repredentados em um bit?";
+  novaPergunta["resposta"] = 2;
+
+});
 

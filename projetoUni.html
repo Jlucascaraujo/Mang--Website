@@ -3,7 +3,6 @@ title: Projeto Graduação em Eng. Software.
 ---
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
 
 <head>
     {% include head.html %}
@@ -11,37 +10,17 @@ title: Projeto Graduação em Eng. Software.
 
 <body>
     {% include header.html %}
-    <br> <!--Quebra de linha-->
     <main id="uniPage">
-        <h4 id="uniPageTitle">Projeto Graduação em Engenharia de Software</h4>
-        <h5>Progresso:</h3>
-            <h6>3º Semestre Cursando</h6>
-            <p class="uniSubject" onclick="displayText()">Programação Front-End I</p>
-                <div id="textField1" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Estrutura de Dados I</p>
-                <div id="textField2" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Análise e Projeto Orientado a Objetos</p>
-                <div id="textField3" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Mentalidade Criativa e Empreendedora</p>
-                <div id="textField4" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Linguagem e Técnicas de Programação</p>
-                <div id="textField5" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Algoritmos e Lógica de Programação</p>        
-                <div id="textField6" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Produção do Conhecimento Científico, Tecnológico e Disrupção</p>    
-                <div id="textField7" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Engenharia de Software</p>        
-                <div id="textField8" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Matemática Aplicada à Computação</p>
-                <div id="textField9" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Projeto de Vida GO</p>
-                <div id="textField0" style="display: none;">Hello There!</div>
-            <p class="uniSubject" onclick="displayText()">Redes de Computadores</p>
-                <div id="textField10" style="display: none;">Hello There!</div>    
-            <p class="uniSubject" onclick="displayText()">Fundamentos e Arquitetura de Computadores</p>
-                <div id="textField11" style="display: none;">Hello There!</div> 
+        <h1>Projeto Graduação em Engenharia de Software</h1>
+        <h5>Progresso: 3º Semestre Cursando</h5>
+        <h4>Programação Front-End</h4>
+        <h5>Atividade 1: Inserindo textos através do JS</h5>
+        <p>Resultado:</p>
+        <div class="caixaResultado">
+            <p id="enunciado"></p>
+        </div>
+        <h5>Atividade 2:</h5>
     </main>
-    <br>
     {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -50,7 +29,6 @@ title: Projeto Graduação em Eng. Software.
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
         integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
         crossorigin="anonymous"></script>
-    <!--Insere Scripts do Bootstrap-->
     <script>
         src = "scripts.js"
         <!--Insere scripts pessoais-->
