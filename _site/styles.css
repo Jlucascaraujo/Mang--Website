@@ -10,6 +10,11 @@ body {
   background-color: #ede0d0;
 }
 
+main {
+  border-left: 3px solid #04241C;
+  border-right: 3px solid #04241C;
+}
+
 /*Headings*/
 h1 {
   font-family: 'Limelight', sans-serif;
@@ -56,64 +61,70 @@ li {
   display: block;
   max-height: fit-content;
   min-height: min-content;
-  margin: 2em;
   padding-bottom: 15vh;
 }
 
 /*Header*/
 header {
   width: 100%;
+  align-items: center;
 }
 
 #titleSection {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  justify-items: stretch;
-  justify-content: space-evenly;
-  
   width: 100%;
+  padding: 0.5rem;
 }
 
 #mainTitle {
   font-family: "Limelight", sans-serif;
-  font-size: 5em;
+  font-size: 4rem;
+  text-transform: capitalize;
 }
 
 #mainTitle a {
   text-decoration: none;
   color: #04241C;
-  ;
 }
 
-#versionNTime {
-  grid-column: 1;
-  font-family: "Courier Prime", monospace;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  min-width: fit-content;
-  max-width: 150px;
-  min-height: fit-content;
-  max-height: 200px;
+#priceNEdition {
+  color: #04241C;
+  width: 121.181px;
+  height: fit-content;
   border: 2px solid #04241C;
   border-radius: 10px;
   border-style: outset;
+  padding-top: 2rem;
+  text-align: center;
   box-shadow: 4px 4px #04241C;
-  padding: 2rem;
-  overflow: hidden;
 }
 
-#titles {
-  grid-column: 2;
+#edition {
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+}
+
+#price {
+  line-height: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#secTime {
+  color: #04241C;
+}
+
+#time {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+}
+
+#title {
   text-align: center;
 }
 
 #profilePic {
-  grid-column: 3;
-  max-width: 113.39px;
-  max-height: 151.181px;
+  max-width: 121.181px;
+  max-height: 170.181px;
   display: block;
   border: 2px solid #04241C;
   border-radius: 10px;
@@ -171,7 +182,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 20px;  
+  gap: 20px;
 }
 
 #textMsgInicial {
@@ -245,17 +256,22 @@ footer a:hover {
   font-weight: bold;
   font-size: 1.5em;
   padding: 20px;
+  text-align: center;
 }
 
 #listaProjetos {
   list-style-type: none;
-
+  text-align: center;
 }
 
 #listaProjetos a {
-  text-decoration: none;
-  color: #BF281B;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #04241C;
 }
+
+
 
 #tituloProjetos {
   margin-left: 2vw;
@@ -282,6 +298,21 @@ footer a:hover {
   font-family: 'Courier Prime', monospace;
   text-transform: uppercase;
 }
+
+.uniLinks a {
+  text-decoration: none;
+  color: #04241C;
+}
+
+.uniLinks a:hover {
+  color: #ede0d0;
+  border: 2px solid #04241C;
+  border-radius: 5px;
+  background-color: #04241C;
+}
+
+/*Página Programação Front End*/
+
 
 /*Controle responsivo da página através do @media*/
 @media (max-width: 868px) {

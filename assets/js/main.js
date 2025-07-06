@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   if (timeElement) {
     const accessTime = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    timeElement.textContent = accessTime.toLocaleDateString('pt-BR', options);
+    const dataCompleta = accessTime.toLocaleDateString('pt-BR', options);
+
+    const partesDaData = dataCompleta.split(', ');
+
+    timeElement.innerHTML = partesDaData[0] + '<br>' + partesDaData[1];
   }
 });
 
@@ -79,25 +83,121 @@ document.addEventListener('DOMContentLoaded', function () {
     var typed = new Typed('.textoStatusAtual', options);
   }, 500);
 
-  let rodada = 0;
-  const totalPerguntas = 17;
-
-  const enunciado = document.getElementById("enunciado");
+  const enunciado1 = document.getElementById("enunciado");
   enunciado.innerHTML = "Quem descobriu o Brasil?";
 
-  const frutas = ["banana", "limão", "pera", "jaca"];
-  console.log(frutas[2]);
+  let rodada = 0;
+  let numPergunta = 0;
+  const totalPerguntas = 17;
 
-  const supermanID = {
-    pergunta: "Qual o nome de batismo do Superman?",
-    alternativas: ["Bruce Wayne", "Wally West", "Clark Kent", "Speedy Gonzales"],
-    resposta: "Clark Kent"
+  const perguntas = [
+    {
+      enunciado: "Qual é o maior planeta do sistema solar?",
+      alternativas: ["Júpiter", "Saturno", "Urano", "Netuno"],
+      resposta: "Júpiter",
+      dificuldade: "Fácil",
+    },
+    {
+      enunciado: "Qual é o menor planeta do sistema solar?",
+      alternativas: ["Mercúrio", "Vênus", "Marte", "Plutão"],
+      resposta: "Mercúrio",
+      dificuldade: "Difícil",
+    }
+  ];
+
+  const alts = document.querySelectorAll(".alternativas .box");
+  const btnPerguntar = document.getElementById("btnPerguntar");
+  const btnParar = document.getElementById("btnParar");
+  const enunciado2 = document.getElementById("enunciado2");
+  const alternativa1 = document.querySelector(".alternativa1");
+  const alternativa2 = document.querySelector(".alternativa2");
+  const alternativa3 = document.querySelector(".alternativa3");
+  const alternativa4 = document.querySelector(".alternativa4");
+  const boxErrar = document.querySelector(".pontuacao .errar");
+  const boxParar = document.querySelector(".pontuacao .parar");
+  const boxAcertar = document.querySelector(".pontuacao .acertar");
+  const mensagem = document.querySelector(".right");
+
+
+
+  function exibePergunta(numero) {
+    enunciado2.innerText = perguntas[numero].enunciado;
+
+    [
+      alternativa1.innerText,
+      alternativa2.innerText,
+      alternativa3.innerText,
+      alternativa4.innerText,
+    ] = perguntas[numero].alternativas;
+  };
+
+  if (localStorage.getItem("rodada") === null) {
+    rodada = 0;
+    localStorage.setItem("rodada", rodada);
+  } else {
+    rodada = localStorage.getItem("rodada");
   }
 
-  const novaPergunta = {};
+  const geraNumeroAleatorio = () => Math.floor(Math.random() * perguntas.length);
 
-  novaPergunta.pergunta = "Quantos números diferentes podem ser repredentados em um bit?";
-  novaPergunta["resposta"] = 2;
+  if (localStorage.getItem("numPergunta") === null) {
+    numPergunta = geraNumeroAleatorio();
+    localStorage.setItem("numPergunta", numPergunta);
+  } else {
+    numPergunta = localStorage.getItem("numPergunta");
+  }
 
+  exibePergunta(geraNumeroAleatorio());
+
+  const perguntasFaceis = perguntas.filter((i) => i.dificuldade === "Fácil");
+  /*Criando uma nova array a partir da função filter que seleciona todos que alcançam um requerimento*/
+
+  console.log(perguntasFaceis);
+
+  alts.forEach((box) => {
+    box.addEventListener("click", (event) => {
+      document.querySelector(".selecionada")?.classList.remove("selecionada");
+      event.target.classList.add("selecionada");
+      btnPerguntar.disabled = false;
+      mensagem.innerText = "";
+    });
+
+    btnParar.addEventListener("click", () => {
+      delete localStorage.rodada;
+      delete localStorage.numPergunta;
+      mensagem.innerText = "Você parou o jogo!\nGanhou " + boxParar.innerHTML;
+      rodada = 0;
+      proximaPergunta();
+    });
+
+    btnPerguntar.addEventListener("click", () => {
+      if (document.querySelector(".selecionada") === null) {
+        mensagem.innerText = "Selecione uma alternativa!";
+        return;
+      }
+
+      const resposta = perguntas[numPergunta].resposta;
+      const alternativa = document.querySelector(".selecionada").innerText;
+
+      if (resposta === alternativa) {
+        mensagem.innerText = "Você acertou!\nGanhou " + boxAcertar.innerHTML;
+        rodada++;
+        localStorage.rodada = rodada;
+      } else {
+        mensagem.innerText = "Você errou!\nGanhou " + boxErrar.innerHTML;
+        delete localStorage.rodada;
+        rodada = 0;
+      }
+
+      proximaPergunta();
+    });
+
+    const proximaPergunta = () => {
+      numPergunta = geraNumeroAleatorio();
+      localStorage.numPergunta = numPergunta;
+      exibePergunta(numPergunta);
+    }
+
+
+  });
 });
-

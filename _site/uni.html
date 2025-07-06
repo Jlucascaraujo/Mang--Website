@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +25,9 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <!--Inserindo origem de fontes da google-->
 <link rel="stylesheet" href="styles.css">
 <!--Insere o arquivo CSS pessoal-->
@@ -37,35 +39,44 @@
 <!--Biblioteca Typed-->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!--Favicon-->
-<title>Projeto Java | Jogando o Machado</title>
+<title>Projeto Graduação em Eng. Software. | Jogando o Machado</title>
 </head>
 
 <body>
-    <header-component></header-component>
-    <nav>
+    <header>
+    <div id="titleSection" class="container">
+        <div id="priceNEdition">
+            <p id="price">25¢</p>
+            <p id="edition">Edição 3.0</p>
+        </div>
+        <div id="title" class="item">
+            <h1 id="mainTitle" class="subitem"><a href="index.html">Portfólio News</a></h1>
+        </div>
+        <div class="item">
+            <img id="profilePic" class="sub-item" src="/assets/images/profilePic.png"
+                alt="Profile Picture">
+        </div>
+        <div id="secTime" class="item">
+            <p id="time"><span id="access-time"></span></p>
+        </div>
+    </div>
+    <nav id="mainNav">
         <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a class="navItem" href="index.html">Início</a></li>
+            <li><a class="navItem" href="curriculum.pdf">Curriculum</a></li>
+            <li><a class="navItem" href="projetos.html">Projetos</a></li>
+            <li><a class="navItem" href="historicoescolar">Histórico Escolar</a></li>
         </ul>
-        <h2><strong>Início</strong></h2>
     </nav>
-    <br> <!--Quebra de linha-->
-    <main>
-
-        <h4>Projeto Java</h4>
-        <dl>
-            <dt>Progresso:</dt>
-            <dd><mark>Iniciante</mark></dd>
-        </dl>
-        <ol>
-            <li><i>Sintaxe Básica</i></li>
-        </ol>
-        <br>
-
+</header>
+    <main id="uniPage">
+        <h1>Projeto Graduação em Engenharia de Software</h1>
+        <h5>Progresso: 3º Semestre Cursando</h5>
+        <h4 class="uniLinks"><a href="uniProgramacaoFrontEnd.html">Programação Front-End</a></h4>
     </main>
-    <br>
-    <footer-component></footer-component>
+    <footer>
+    <h3><b><a href="contato.html">Contato</a></b></h3>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -73,7 +84,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
         integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
         crossorigin="anonymous"></script>
-    <!--Insere Scripts do Bootstrap-->
     <script>
         src = "scripts.js"
         <!--Insere scripts pessoais-->
