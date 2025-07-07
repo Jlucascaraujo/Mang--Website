@@ -1,18 +1,26 @@
-/*Seção principal da página*/
+/*Padrões*/
 * {
   margin: 0;
   padding: 0;
+  --text-color: #04241C;
+  --link-color: #084b3a;
+  --background-color: #ede0d0;
+}
+
+* a {
+  text-decoration: none;
+  color: var(--link-color);
 }
 
 body {
   position: relative;
   height: 100%;
-  background-color: #ede0d0;
+  background-color: var(--background-color);
 }
 
 main {
-  border-left: 3px solid #04241C;
-  border-right: 3px solid #04241C;
+  border-left: 3px solid var(--text-color);
+  border-right: 3px solid var(--text-color);
 }
 
 /*Headings*/
@@ -71,66 +79,70 @@ header {
 }
 
 #titleSection {
-  width: 100%;
-  padding: 0.5rem;
-}
-
-#mainTitle {
-  font-family: "Limelight", sans-serif;
-  font-size: 4rem;
-  text-transform: capitalize;
-}
-
-#mainTitle a {
-  text-decoration: none;
-  color: #04241C;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
 }
 
 #priceNEdition {
-  color: #04241C;
-  width: 121.181px;
-  height: fit-content;
-  border: 2px solid #04241C;
-  border-radius: 10px;
-  border-style: outset;
-  padding-top: 2rem;
-  text-align: center;
-  box-shadow: 4px 4px #04241C;
-}
-
-#edition {
-  font-family: 'PT Serif', serif;
-  font-weight: bold;
+  aspect-ratio: 3/4;
+  height: 4cm;
+  display: flex;
+  justify-self: self-end;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #04241C;
+  border-radius: 5px;
+  box-shadow: 3px 3px #04241C;
 }
 
 #price {
-  line-height: 1rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3rem;
   font-weight: bold;
 }
 
-#secTime {
-  color: #04241C;
+#edition {
+  padding-bottom: 0.5em;
+  /* Optional: adds some space from the bottom */
 }
 
-#time {
-  font-family: "PT Serif", serif;
-  font-weight: bold;
-}
 
 #title {
-  text-align: center;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+#title a {
+  color: var(--text-color);
+  font-size: 5rem;
 }
 
 #profilePic {
-  max-width: 121.181px;
-  max-height: 170.181px;
-  display: block;
-  border: 2px solid #04241C;
-  border-radius: 10px;
-  border-style: outset;
-  box-shadow: 4px 4px #04241C;
+  aspect-ratio: 3/4;
+  height: 4cm;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border: 3px solid #04241C;
+  border-radius: 5px;
+  box-shadow: 3px 3px #04241C;
 }
+
+#secTime {
+  display: flex;
+  align-items: center;
+  justify-self: self-end;
+}
+
 
 /*Nav Bar*/
 #mainNav {
@@ -139,7 +151,8 @@ header {
   justify-content: center;
   background-color: #ede0d0;
   color: #04241C;
-  border-bottom: 2px solid #04241C;
+  border-top: 10px double var(--text-color);
+  border-bottom: 10px double var(--text-color);
 }
 
 #mainNav>ul {
@@ -229,11 +242,9 @@ footer {
   width: 100%;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 10px;
   justify-items: left;
   margin-top: 5vh;
-  padding: 15px;
-  padding-top: 50px;
   border-top: solid 3px #04241C;
 }
 
@@ -247,7 +258,6 @@ footer a:hover {
   color: #ede0d0;
   background-color: #04241C;
   border-radius: 5px;
-  padding: 5px;
 }
 
 /*Página de projetos*/
