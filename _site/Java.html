@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
 
 <head>
     <meta charset="UTF-8">
@@ -41,7 +40,38 @@
 </head>
 
 <body>
-    <header-component></header-component>
+    <header>
+    <div id="titleSection" class="container">
+        <div id="priceNEdition">
+            <p id="price">25¢</p>
+            <p id="edition">Edição 3.0</p>
+        </div>
+        <div id="title" class="item">
+            <h1 id="mainTitle" class="subitem"><a href="index.html">Portfólio News</a></h1>
+        </div>
+        <div class="item">
+            <img id="profilePic" class="sub-item" src="/assets/images/profilePic.png"
+                alt="Profile Picture">
+        </div>
+        <div id="secTime" class="item">
+            <p id="time"><span id="access-time"></span></p>
+        </div>
+    </div>
+    <nav id="mainNav">
+        <ul>
+            <li><a class="navItem" href="index.html">Início</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">Projetos</button>
+                <div class="dropdown-content">
+                <a href="c.html">C</a>
+                <a href="Csharp.html">C#</a>
+                <a href="java.html">Java</a>
+                <a href="frontend.html">Front-End</a>
+            </div></li>
+            <li><a class="navItem" href="historicoescolar">Histórico Escolar</a></li>
+        </ul>
+    </nav>
+</header>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -62,18 +92,11 @@
             <li><i>Sintaxe Básica</i></li>
         </ol>
         <br>
-
     </main>
-    <br>
-    <footer-component></footer-component>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-        crossorigin="anonymous"></script>
-    <!--Insere Scripts do Bootstrap-->
+    <footer>
+    <h3><b><a href="contato.html">Contato</a></b></h3>
+</footer>
     <script>
         src = "scripts.js"
         <!--Insere scripts pessoais-->

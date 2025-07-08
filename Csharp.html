@@ -3,23 +3,13 @@ title: Projeto C#
 ---
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Define a linguagem do website para a Lingua Portuguesa-->
 
 <head>
     {% include head.html %}
 </head>
 
 <body>
-    <header-component></header-component>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-        <h2><strong>Início</strong></h2>
-    </nav>
-    <br> <!--Quebra de linha-->
+    {% include header.html %}
     <main>
         <h4>Projeto C#</h4>
         <dl>
@@ -33,19 +23,12 @@ title: Projeto C#
         <ol>
             <li><i>Sintaxe Intermediária.</i>
             <li><s>Sintaxe Básica.</s></li>
-        </ol> <!--Define lista ordenada-->
+        </ol> 
         <br>
     </main>
     <br>
-    <footer-component></footer-component>
+    {% include footer.html %}
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-        crossorigin="anonymous"></script>
-    <!--Insere Scripts do Bootstrap-->
     <script>
         src = "scripts.js"
         <!--Insere scripts pessoais-->

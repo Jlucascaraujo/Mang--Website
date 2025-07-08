@@ -163,11 +163,13 @@ header {
 
 .navItem {
   box-shadow: inset 0 0 0 0 #ede0d0;
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
   font-weight: 700;
   margin: 0 25px;
   color: #04241C;
   text-decoration: none;
-  padding: 5px;
   border-radius: 5px;
   margin: .25rem;
   transition: color .2s ease-in-out, box-shadow .2s ease-in-out, padding .2s ease-in-out, border-radius .2s ease-in-out;
@@ -175,10 +177,57 @@ header {
 
 .navItem:hover {
   color: #ede0d0;
-  box-shadow: inset 100px 0 0 0 #04241C;
+  box-shadow: inset 200px 0 0 0 #04241C;
   text-decoration: underline;
   border-radius: 5px;
   padding: 5px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  font-weight: 700;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  outline-style: none;
+  border: none;
+  color: #04241C;
+  border-radius: 5px;
+  margin: .25rem;
+  transition: color .2s ease-in-out, box-shadow .2s ease-in-out, padding .2s ease-in-out, border-radius .2s ease-in-out;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #04241C;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: var(--background-color);
+  background-color: var(--link-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--link-color);
 }
 
 /*Mensagem de Introdução do Portfólio*/
