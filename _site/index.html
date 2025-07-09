@@ -28,14 +28,18 @@
 <!--Inserindo origem de fontes da google-->
 <link rel="stylesheet" href="styles.css">
 <!--Insere o arquivo CSS pessoal-->
-<script src="/assets/js/main.js"></script>
-<!--JS inserido no Jekyll-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!--Biblioteca jQuery-->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <!--Biblioteca Typed-->
+<script src="/assets/js/main.js"></script>
+<!--JS pessoal inserido no Jekyll-->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!--Favicon-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+<!--Ion Icons-->
+
 <title>Home | Jogando o Machado</title>
 </head>
 
@@ -74,9 +78,9 @@
 </header>
     <div class="wrapper">
         <main id="mainPage">
-            <session id="mensagensPgMain">
+            <section id="mensagensPgMain">
                 <h2 id="textMsgInicial">Olá, sou <span id="nomeDestaque">José Lucas</span>, focado em Front-End,
-                    aspirante a FullStack.</h1>
+                    aspirante a FullStack.</h2>
                     <div id="textoSecundario">
                         <noscript>
                             <p>Estou me formando em Engenharia de Software e estudando programação pela Udemy, Dio.me e
@@ -84,8 +88,8 @@
                         </noscript>
                         <p class="textoStatusAtual"></p>
                     </div>
-            </session>
-            <session id="technicalKnowHowIcons">
+            </section>
+            <section id="technicalKnowHowIcons">
                 <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
@@ -94,17 +98,13 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-            </session>
+            </section>
         </main>
         <br>
     </div>
     <footer>
     <h3><b><a href="contato.html">Contato</a></b></h3>
 </footer> <!--Footer inserido pelo Jekyll-->
-    <script>
-        src = "scripts.js"
-        <!--Insere scripts pessoais-->
-    </script>
 </body>
 
 </html>

@@ -206,7 +206,7 @@ header {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -330,8 +330,6 @@ footer a:hover {
   color: #04241C;
 }
 
-
-
 #tituloProjetos {
   margin-left: 2vw;
   text-transform: uppercase;
@@ -371,6 +369,71 @@ footer a:hover {
 }
 
 /*Página Programação Front End*/
+
+/*Página C*/
+#cPage {
+  display: block;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expandable {
+  --xy-padding: 14px;
+  --border-radius: 6px;
+  --transition-ms: 0.3s;
+  width: 80%;
+  margin: 1em 0;
+  font-size: 1rem;
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.expandable__open .expandable__content-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.expandable__open .expandable__icon {
+  transform: rotate(-90deg);
+}
+
+.expandable__title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--xy-padding);
+  user-select: none;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  cursor: pointer;
+}
+
+.expandable__title {
+  font-weight: bold;
+}
+
+.expandable__icon {
+  transition: transform var(--transition-ms);
+}
+
+.expandable__content {
+  padding: 0 var(--xy-padding);
+  line-height: 1.4;
+  font-size: 0.85em;
+  border: 1px solid var(--text-color);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-top: none;
+  overflow: hidden;
+}
+
+.expandable__content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
 
 
 /*Controle responsivo da página através do @media*/

@@ -10,22 +10,21 @@ title: Projeto C
 
 <body>
     {% include header.html %}
-    <main>
+    <main id="cPage">
         <h1>Linguagem C, Projetos</h1>
-        <section>
-            <article id="article2" class="articles">
-                <h5>Estrutura de Dados: Fila</h5>
-            </article>
-            <article id="article1" class="articles">
-                <h5>Calculadora Simples em C</h5>
-            </article>
-        </section>
+        <div class="expandable">
+            <div class="expandable__title-bar">
+                <span class="expandable__title">Criar Vetor e Imprimir o Resultado</span>
+                <ion-icon class="expandable__icon" name="chevron-back"></ion-icon>
+            </div>
+            <div class="expandable__content-wrapper">
+                <div class="expandable__content">
+                    <script src="//onlinegdb.com/embed/js/kYCas1mdT?theme=dark"></script>
+                </div>
+            </div>
+        </div>
     </main>
     {% include footer.html %}
-    <script>
-        src = "scripts.js"
-        <!--Insere scripts pessoais-->
-    </script>
 </body>
 
 </html>

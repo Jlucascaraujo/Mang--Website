@@ -28,14 +28,18 @@
 <!--Inserindo origem de fontes da google-->
 <link rel="stylesheet" href="styles.css">
 <!--Insere o arquivo CSS pessoal-->
-<script src="/assets/js/main.js"></script>
-<!--JS inserido no Jekyll-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!--Biblioteca jQuery-->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <!--Biblioteca Typed-->
+<script src="/assets/js/main.js"></script>
+<!--JS pessoal inserido no Jekyll-->
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <!--Favicon-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+<!--Ion Icons-->
+
 <title>Projeto C | Jogando o Machado</title>
 </head>
 
@@ -72,24 +76,23 @@
         </ul>
     </nav>
 </header>
-    <main>
+    <main id="cPage">
         <h1>Linguagem C, Projetos</h1>
-        <section>
-            <article id="article2" class="articles">
-                <h5>Estrutura de Dados: Fila</h5>
-            </article>
-            <article id="article1" class="articles">
-                <h5>Calculadora Simples em C</h5>
-            </article>
-        </section>
+        <div class="expandable">
+            <div class="expandable__title-bar">
+                <span class="expandable__title">Criar Vetor e Imprimir o Resultado</span>
+                <ion-icon class="expandable__icon" name="chevron-back"></ion-icon>
+            </div>
+            <div class="expandable__content-wrapper">
+                <div class="expandable__content">
+                    <script src="//onlinegdb.com/embed/js/kYCas1mdT?theme=dark"></script>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
     <h3><b><a href="contato.html">Contato</a></b></h3>
 </footer>
-    <script>
-        src = "scripts.js"
-        <!--Insere scripts pessoais-->
-    </script>
 </body>
 
 </html>
